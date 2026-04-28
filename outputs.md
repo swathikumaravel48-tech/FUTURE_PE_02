@@ -226,3 +226,68 @@ Here are enhanced, high-converting UGC Reel scripts for Brew Haven Café in Chen
 
 **📍 CTA**
 “If you’re tired of ‘trying’ to be productive, switch your space. Try Brew Haven Café in Chennai—you’ll feel the difference 💻☕✨”
+
+
+## Captions
+
+Here are 5 Instagram captions for promoting Brew Haven Café in Chennai:
+
+
+---
+
+**1.**
+
+Your perfect coffee break is waiting ☕✨
+Step into comfort, calm vibes, and seriously good coffee at Brew Haven Café.
+
+👉 Visit us today and feel the difference!
+
+#BrewHavenCafe #ChennaiCafe #CoffeeLovers #CafeVibes #StudySpot
+
+
+---
+
+**2.**
+
+Good coffee. Cozy corners. Better moods. ☕🌿
+That’s the Brew Haven promise 💛
+
+👉 Drop in today and make your day better, one sip at a time!
+
+#ChennaiFoodies #CafeCulture #CoffeeTime #BrewHavenVibes #ChennaiDiaries
+
+
+---
+
+**3.**
+
+POV: You found your new favorite café in Chennai 😍☕
+Comfort, vibes, and coffee that just hits right.
+
+👉 Don’t just scroll—come experience it!
+
+#BrewHavenCafe #CafeLovers #ChennaiLife #CoffeeAddict #HiddenGems
+
+
+---
+
+**4.**
+
+Need a break from everything? We got you ☕🌿
+Relax, recharge, and reset at Brew Haven Café.
+
+👉 Visit us today and slow down with us 🤍
+
+#RelaxAndSip #ChennaiCafes #CoffeeBreak #CafeVibes #BrewHaven
+
+
+---
+
+**5.**
+
+Work, chill, repeat 💻☕✨
+Brew Haven Café is where productivity meets comfort.
+
+👉 Grab your spot today and stay a while!
+
+#StudyCafe #WorkFromCafe #ChennaiStudents #CoffeeVibes #BrewHavenCafe
