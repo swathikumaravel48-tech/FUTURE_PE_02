@@ -101,46 +101,65 @@ Now it’s kinda my go-to spot whenever I need a break or a reset.”
 “If you’re in Chennai, you NEED to check this out.
 Trust me… Brew Haven Café hits different ☕✨”
 
+
 ## UGC Script Variations
+
+---
 
 ### 1. Fun & Energetic
 
-🎬 Hook (0–3 sec)
-“Okay but WHY is no one talking about this café?! 😳☕”
-😩 Problem
-“I’m done with boring cafés and average coffee… like give me SOMETHING exciting!”
-✨ Experience
-“Then I walked into Brew Haven Café—boom! Amazing coffee, cute interiors, chill music… total vibe check ✔️”
-💛 Emotional Connection
-“I came for a quick coffee… ended up staying for hours laughing, chilling, and just feeling GOOD 😭✨”
-📍 CTA
+**🎬 Hook (0–3 sec)**  
+“Okay… but WHY is no one talking about this café?! 😳☕”
+
+**😩 Problem**  
+“I’m done with boring cafés and average coffee… I need something exciting!”
+
+**✨ Experience**  
+“Then I walked into Brew Haven Café — amazing coffee, aesthetic interiors, chill music… total vibe check ✔️”
+
+**💛 Emotional Connection**  
+“I came for a quick coffee… ended up staying for hours, laughing and just feeling GOOD 😭✨”
+
+**📍 Call To Action (CTA)**  
 “Grab your friends and go! Brew Haven Café is the vibe you didn’t know you needed 💃☕”
+
+---
 
 ### 2. Calm & Cozy
 
-
-🎬 Hook (0–3 sec)
+**🎬 Hook (0–3 sec)**  
 “Ever found a place that instantly calms you down? ☕🌿”
-😩 Problem
+
+**😩 Problem**  
 “Everything feels so rushed lately… I just wanted a quiet space to breathe.”
-✨ Experience
-“I found Brew Haven Café—soft lighting, peaceful corners, and coffee that feels like comfort in a cup.”
-💛 Emotional Connection
+
+**✨ Experience**  
+“I found Brew Haven Café — soft lighting, cozy seating, and coffee that feels like comfort in a cup.”
+
+**💛 Emotional Connection**  
 “It’s become my little escape… where everything slows down, even if just for a while.”
-📍 CTA
+
+**📍 Call To Action (CTA)**  
 “If you’re in Chennai, take a break and visit Brew Haven Café… you deserve this moment 🤍”
+
+---
 
 ### 3. Productivity Vibe
 
-🎬 Hook (0–3 sec)
+**🎬 Hook (0–3 sec)**  
 “POV: You finally find a café where you actually get work done 📚☕”
-😩 Problem
+
+**😩 Problem**  
 “I kept hopping cafés… too noisy, no Wi-Fi, or just not the right vibe to focus.”
-✨ Experience
-“Then I found Brew Haven Café—fast Wi-Fi, comfy seating, and coffee that keeps me going for hours 🔥”
-💛 Emotional Connection
-“Now my productivity is actually REAL… and I don’t hate studying anymore 😭”
-📍 CTA
+
+**✨ Experience**  
+“Then I found Brew Haven Café — fast Wi-Fi, comfy seating, and coffee that keeps me going 🔥”
+
+**💛 Emotional Connection**  
+“Now my productivity feels real… and I don’t hate studying anymore 😭”
+
+**📍 Call To Action (CTA)**  
 “If you’ve been struggling to focus, try Brew Haven Café in Chennai… it might just change your routine 💻✨”
 
+---
 
