@@ -27,8 +27,29 @@ This project focuses on generating user-generated content (UGC) style advertisem
 4. Improved content quality using iterative prompting
 5. Documented all outputs and prompts
 
-## Author
+---
+
+## 📸 Screenshots
+
+### Hooks
+![Hooks](hooks.png)
+
+### UGC Script
+![UGC Script](script.png)
+
+### Variations
+![Variations](variations.png)
+
+### Improved Ads
+![Improved Ads](improved.png)
+
+### Instagram Captions
+![Captions](caption.png)
+
+---
+
+## 👩‍💻 Author
 Swathi K
 
-## Status
+## 🚧 Status
 Work in Progress 🚀
