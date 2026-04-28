@@ -170,7 +170,7 @@ Here are enhanced, high-converting UGC Reel scripts for Brew Haven Café in Chen
 
 ---
 
-###1. Fun & Energetic 🎉
+### 1. Fun & Energetic 🎉
 
 **🎬 Hook (0–3 sec)**
 “Stop scrolling—this café just fixed my entire mood in 10 minutes 😳☕”
@@ -190,7 +190,7 @@ Here are enhanced, high-converting UGC Reel scripts for Brew Haven Café in Chen
 
 ---
 
-###2. Calm & Cozy 🌿
+### 2. Calm & Cozy 🌿
 
 **🎬 Hook (0–3 sec)**
 “If your mind feels noisy lately… you need to see this ☕🌿”
@@ -210,7 +210,7 @@ Here are enhanced, high-converting UGC Reel scripts for Brew Haven Café in Chen
 
 ---
 
-###3. Study/Work Productivity 📚
+### 3. Study/Work Productivity 📚
 
 **🎬 Hook (0–3 sec)**
 “I found a café where I actually finish my work… no distractions 😳💻”
