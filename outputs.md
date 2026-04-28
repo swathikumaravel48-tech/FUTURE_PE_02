@@ -102,19 +102,5 @@ Now it’s kinda my go-to spot whenever I need a break or a reset.”
 Trust me… Brew Haven Café hits different ☕✨”
 
 
-## UGC Ad Script Prompt
-
-Act as a content creator.
-
-Write a UGC-style Instagram Reel ad script for "Brew Haven Café".
-
-Structure:
-- Hook (first 3 seconds)
-- Problem
-- Experience
-- Emotional connection
-- Call to action
-
-Tone: Natural, friendly, relatable
 
 
