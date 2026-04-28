@@ -64,6 +64,57 @@ Here are upgraded, high-converting hooks for Brew Haven Café in Chennai — bui
 
 10. You came for coffee… but stayed for something else ✨
 
+## UGC Ad Script
 
+🎥 UGC-Style Instagram Reel Script – Brew Haven Café (Chennai)
+
+
+---
+
+🎬 Hook (0–3 sec)
+“Wait… how did I not know this café existed? 😳☕”
+
+
+---
+
+😩 Problem
+“I was so tired of noisy places, bad coffee, and not finding a spot where I could actually focus or relax…”
+
+
+---
+
+✨ Experience
+“Then I found Brew Haven Café. The coffee? SO good. Like, actually good.
+And the vibe? Cozy, calm, aesthetic… plus Wi-Fi that actually works 🙌”
+
+
+---
+
+💛 Emotional Connection
+“It’s one of those places where you walk in stressed… and walk out feeling lighter.
+Now it’s kinda my go-to spot whenever I need a break or a reset.”
+
+
+---
+
+📍 Call to Action
+“If you’re in Chennai, you NEED to check this out.
+Trust me… Brew Haven Café hits different ☕✨”
+
+
+## UGC Ad Script Prompt
+
+Act as a content creator.
+
+Write a UGC-style Instagram Reel ad script for "Brew Haven Café".
+
+Structure:
+- Hook (first 3 seconds)
+- Problem
+- Experience
+- Emotional connection
+- Call to action
+
+Tone: Natural, friendly, relatable
 
 
