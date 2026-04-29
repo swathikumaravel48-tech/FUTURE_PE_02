@@ -1,1 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FUTURE_PE_02 — AI UGC Content Marketing</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0a0f;--surface:#13131a;--surface2:#1c1c28;--border:rgba(255,255,255,0.07);--accent:#ff6b35;--accent2:#ffbe0b;--accent3:#8ecae6;--accent4:#06d6a0;--text:#f0f0f5;--muted:#6b6b80;--card-radius:16px}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:999;opacity:0.4}
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:60px 24px 80px;position:relative;overflow:hidden}
+  .hero-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,0.15) 0%,transparent 70%);top:-100px;right:-200px;pointer-events:none}
+  .hero-glow2{position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(255,190,11,0.08) 0%,transparent 70%);bottom:-50px;left:-100px;pointer-events:none}
+  .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.25);color:var(--accent);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:32px;width:fit-content;animation:fadeUp 0.6s ease both}
+  .badge::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes slide{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+  .hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,8vw,64px);font-weight:800;line-height:1.05;letter-spacing:-0.02em;margin-bottom:20px;animation:fadeUp 0.6s 0.1s ease both}
+  .hero h1 span{color:var(--accent)}
+  .hero-sub{font-size:16px;color:var(--muted);max-width:520px;margin-bottom:40px;font-weight:300;animation:fadeUp 0.6s 0.2s ease both}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:12px;animation:fadeUp 0.6s 0.3s ease both}
+  .meta-pill{background:var(--surface);border:1px solid var(--border);padding:8px 16px;border-radius:100px;font-size:12px;color:var(--muted);font-weight:500}
+  .meta-pill strong{color:var(--text)}
+  .platform-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .pb{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:10px;font-size:12px;font-weight:600}
+  .pb-ig{background:rgba(225,48,108,0.12);border:1px solid rgba(225,48,108,0.25);color:#e1306c}
+  .pb-fb{background:rgba(24,119,242,0.12);border:1px solid rgba(24,119,242,0.25);color:#5b9cf6}
+  .pb-yt{background:rgba(255,70,70,0.1);border:1px solid rgba(255,70,70,0.2);color:#ff6464}
+  .scroll-hint{position:absolute;bottom:32px;left:24px;display:flex;align-items:center;gap:10px;font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;animation:fadeUp 0.6s 0.5s ease both}
+  .scroll-line{width:40px;height:1px;background:var(--muted);position:relative;overflow:hidden}
+  .scroll-line::after{content:'';position:absolute;height:100%;width:100%;background:var(--accent);animation:slide 1.5s infinite}
+  section{padding:80px 24px;max-width:900px;margin:0 auto}
+  .section-label{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+  .section-title{font-family:'Syne',sans-serif;font-size:clamp(28px,5vw,42px);font-weight:800;letter-spacing:-0.02em;margin-bottom:48px;line-height:1.1}
+  .divider{height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);margin:0 24px}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  .hooks-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .hook-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px;transition:border-color 0.3s,transform 0.2s}
+  .hook-card:hover{border-color:rgba(255,107,53,0.3);transform:translateY(-2px)}
+  .hook-num{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;color:var(--accent);margin-bottom:6px;letter-spacing:0.1em}
+  .hook-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:100px;margin-bottom:8px;font-weight:600}
+  .tag-v1{background:rgba(107,107,128,0.2);color:var(--muted)}
+  .tag-v2{background:rgba(6,214,160,0.12);color:var(--accent4);border:1px solid rgba(6,214,160,0.2)}
+  .hook-text{font-size:13px;color:var(--text);line-height:1.6}
+  .tab-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+  .tab-btn{background:var(--surface);border:1px solid var(--border);padding:8px 18px;border-radius:100px;font-size:13px;font-weight:500;color:var(--muted);cursor:pointer;transition:all 0.2s}
+  .tab-btn.active,.tab-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  .tab-panel{display:none}
+  .tab-panel.active{display:block}
+  .script-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--card-radius);overflow:hidden}
+  .script-header{padding:24px 28px 20px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .script-header-left h2{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;margin-bottom:6px}
+  .script-header-left p{font-size:13px;color:var(--muted)}
+  .platform-badge-sm{font-size:11px;font-weight:600;padding:5px 12px;border-radius:100px;white-space:nowrap;flex-shrink:0}
+  .pb-sm-ig{background:rgba(225,48,108,0.12);color:#e1306c;border:1px solid rgba(225,48,108,0.25)}
+  .pb-sm-fb{background:rgba(24,119,242,0.12);color:#5b9cf6;border:1px solid rgba(24,119,242,0.25)}
+  .pb-sm-yt{background:rgba(255,70,70,0.1);color:#ff6464;border:1px solid rgba(255,70,70,0.2)}
+  .script-steps{padding:24px 28px;display:flex;flex-direction:column;gap:0}
+  .script-step{display:flex;gap:18px;padding-bottom:24px;position:relative}
+  .script-step:not(:last-child)::after{content:'';position:absolute;left:16px;top:36px;width:2px;height:calc(100% - 14px);background:linear-gradient(to bottom,rgba(255,107,53,0.35),transparent)}
+  .step-dot{width:34px;height:34px;min-width:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+  .d-hook{background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.3)}
+  .d-prob{background:rgba(255,190,11,0.12);border:1px solid rgba(255,190,11,0.25)}
+  .d-exp{background:rgba(6,214,160,0.12);border:1px solid rgba(6,214,160,0.25)}
+  .d-emo{background:rgba(142,202,230,0.12);border:1px solid rgba(142,202,230,0.25)}
+  .d-cta{background:rgba(255,107,53,0.15);border:1px solid rgba(255,107,53,0.3)}
+  .step-body{padding-top:4px}
+  .step-timing{font-size:10px;color:var(--accent);font-weight:600;margin-bottom:3px}
+  .step-label{font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .step-text{font-size:14px;color:var(--text);line-height:1.7}
+  .prompt-logic{background:rgba(255,107,53,0.05);border:1px solid rgba(255,107,53,0.15);border-radius:10px;padding:14px 18px;margin-top:16px;font-size:13px;color:#ffaa88;line-height:1.7}
+  .prompt-logic strong{color:var(--accent);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .caption-grid{display:flex;flex-direction:column;gap:12px}
+  .caption-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;transition:border-color 0.3s}
+  .caption-card:hover{border-color:rgba(255,190,11,0.3)}
+  .caption-num{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--accent2);margin-bottom:10px;letter-spacing:0.08em}
+  .caption-text{font-size:14px;color:var(--text);line-height:1.8}
+  .caption-tags{margin-top:10px;font-size:12px;color:var(--accent3)}
+  .platform-adapt-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  .platform-adapt-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 22px;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;transition:border-color 0.3s}
+  .platform-adapt-card:hover{border-color:rgba(255,107,53,0.25)}
+  .pa-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px}
+  .pa-ig{background:rgba(225,48,108,0.12)}
+  .pa-fb{background:rgba(24,119,242,0.12)}
+  .pa-yt{background:rgba(255,70,70,0.1)}
+  .platform-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px}
+  .platform-tip{font-size:13px;color:var(--muted);line-height:1.6}
+  .summary-table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:var(--card-radius);overflow:hidden;border:1px solid var(--border)}
+  .summary-table thead{background:var(--surface2)}
+  .summary-table th{text-align:left;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);padding:14px 18px;border-bottom:1px solid var(--border)}
+  .summary-table td{padding:13px 18px;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.04);vertical-align:top}
+  .summary-table tr:last-child td{border-bottom:none}
+  .summary-table td:first-child{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--accent)}
+  footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;color:var(--muted);font-size:13px}
+  footer a{color:var(--accent);text-decoration:none}
+  footer .footer-name{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px}
+  @media(max-width:600px){.hooks-grid{grid-template-columns:1fr}.script-header{flex-direction:column}.platform-adapt-card{grid-template-columns:1fr}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-glow"></div><div class="hero-glow2"></div>
+  <div class="badge">Future Interns · Prompt Engineering Track · Task 2</div>
+  <h1>AI Content Marketing<br><span>with UGC Ads</span></h1>
+  <p class="hero-sub">Generating scroll-stopping hooks, authentic UGC scripts, platform-specific content, and high-converting captions for Brew Haven Café using structured prompt engineering.</p>
+  <div class="hero-meta">
+    <div class="meta-pill">🛠 <strong>Claude · ChatGPT</strong></div>
+    <div class="meta-pill">🎬 <strong>3 Script Variations</strong></div>
+    <div class="meta-pill">📱 <strong>3 Platforms</strong></div>
+    <div class="meta-pill">👩‍💻 <strong>Swathi K</strong></div>
+  </div>
+  <div class="platform-row">
+    <div class="pb pb-ig">📸 Instagram Reels</div>
+    <div class="pb pb-fb">👍 Facebook Feed</div>
+    <div class="pb pb-yt">▶️ YouTube Shorts</div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div>Scroll to explore</div>
+</div>
+<div class="divider"></div>
 
+<section>
+  <div class="section-label reveal">Step 1 — Attention</div>
+  <div class="section-title reveal">Scroll-Stopping<br>Hooks</div>
+  <p class="reveal" style="color:var(--muted);font-size:14px;margin-bottom:28px;margin-top:-28px">The first 3 seconds decide everything. Original hooks were refined with an improvement prompt targeting open loops and curiosity gaps.</p>
+  <div class="hooks-grid reveal">
+    <div class="hook-card"><div class="hook-num">HOOK 01</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">POV: You found a café where your mind finally slows down ☕✨</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 02</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">This one sip just turned your worst day around…</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 03</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">Not all cafés feel like this… wait till you see inside 👀</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 04</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">You weren't planning to stay long… but then this happened</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 05</div><div class="hook-tag tag-v1">Original</div><div class="hook-text">POV: You finally found your study spot that actually works ☕📚</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 06</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">Deadlines feel different when you're here 😌📚</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 07</div><div class="hook-tag tag-v1">Original</div><div class="hook-text">From burnout to chill mode in 10 minutes ⚡☕</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 08</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">Chennai has a hidden café you'll wish you found sooner…</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 09</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">Ever walked into a place and instantly felt at home?</div></div>
+    <div class="hook-card"><div class="hook-num">HOOK 10</div><div class="hook-tag tag-v2">✨ Improved</div><div class="hook-text">Careful… you might fall in love with this spot 💛</div></div>
+  </div>
+  <div class="prompt-logic reveal"><strong>Prompt Logic</strong>Original hooks used direct statements. The improvement prompt targeted open loops ("wait till you see…"), incomplete thoughts, and second-person POV to create psychological curiosity gaps — proven to increase watch-time and reduce scroll-past rate.</div>
+</section>
+<div class="divider"></div>
+
+<section>
+  <div class="section-label reveal">Step 2 — Storytelling</div>
+  <div class="section-title reveal">UGC Ad Scripts<br>3 Brand Voices</div>
+  <div class="tab-bar reveal">
+    <button class="tab-btn active" onclick="showTab('fun',this)">🎉 Fun & Energetic</button>
+    <button class="tab-btn" onclick="showTab('cozy',this)">🌿 Calm & Cozy</button>
+    <button class="tab-btn" onclick="showTab('work',this)">📚 Study & Work</button>
+  </div>
+  <div class="tab-panel active" id="tab-fun">
+    <div class="script-card">
+      <div class="script-header"><div class="script-header-left"><h2>Fun & Energetic</h2><p>High energy · Youth-driven · Local business tone</p></div><span class="platform-badge-sm pb-sm-ig">📸 Instagram Reels</span></div>
+      <div class="script-steps">
+        <div class="script-step"><div class="step-dot d-hook">🎬</div><div class="step-body"><div class="step-timing">0–3 seconds</div><div class="step-label">Hook</div><div class="step-text">"Stop scrolling — this café just fixed my entire mood in 10 minutes 😳☕"</div></div></div>
+        <div class="script-step"><div class="step-dot d-prob">😩</div><div class="step-body"><div class="step-label">Problem</div><div class="step-text">"You know those days where everything feels off? Bad coffee, boring places, nothing hits right…"</div></div></div>
+        <div class="script-step"><div class="step-dot d-exp">✨</div><div class="step-body"><div class="step-label">Experience</div><div class="step-text">"I randomly tried Brew Haven Café — and wow. The coffee actually tastes amazing, the vibe is lively but not chaotic, and every corner is just chef's kiss ✨"</div></div></div>
+        <div class="script-step"><div class="step-dot d-emo">💛</div><div class="step-body"><div class="step-label">Emotional Connection</div><div class="step-text">"I went in feeling 'meh'… and somehow left smiling for no reason. Like… this place just lifts your mood."</div></div></div>
+        <div class="script-step"><div class="step-dot d-cta">📍</div><div class="step-body"><div class="step-label">Call To Action</div><div class="step-text">"If your day needs a reset, don't overthink it — just go to Brew Haven Café. Take your people. Thank me later 💃☕"</div></div></div>
+      </div>
+    </div>
+    <div class="prompt-logic"><strong>Prompt Logic</strong>"Match tone to brand type: local business + youth audience" instructed casual first-person storytelling. The Problem–Solution–CTA structure mirrors proven direct response copywriting — problem creates identification, experience creates desire, CTA converts.</div>
+  </div>
+  <div class="tab-panel" id="tab-cozy">
+    <div class="script-card">
+      <div class="script-header"><div class="script-header-left"><h2>Calm & Cozy</h2><p>Soft · Emotional · Wellness-driven tone</p></div><span class="platform-badge-sm pb-sm-fb">👍 Facebook Feed</span></div>
+      <div class="script-steps">
+        <div class="script-step"><div class="step-dot d-hook">🎬</div><div class="step-body"><div class="step-timing">0–3 seconds</div><div class="step-label">Hook</div><div class="step-text">"If your mind feels noisy lately… you need to see this ☕🌿"</div></div></div>
+        <div class="script-step"><div class="step-dot d-prob">😩</div><div class="step-body"><div class="step-label">Problem</div><div class="step-text">"I didn't realize how overwhelmed I was until I couldn't find a single quiet place to just sit and breathe…"</div></div></div>
+        <div class="script-step"><div class="step-dot d-exp">✨</div><div class="step-body"><div class="step-label">Experience</div><div class="step-text">"Then I found Brew Haven Café — soft lighting, calm music, and coffee that feels warm in more ways than one."</div></div></div>
+        <div class="script-step"><div class="step-dot d-emo">💛</div><div class="step-body"><div class="step-label">Emotional Connection</div><div class="step-text">"For a little while, everything slowed down. No rush, no noise… just me, my thoughts, and a really good cup of coffee."</div></div></div>
+        <div class="script-step"><div class="step-dot d-cta">📍</div><div class="step-body"><div class="step-label">Call To Action</div><div class="step-text">"If you've been needing a break, this is your sign. Visit Brew Haven Café in Chennai… and just pause 🤍"</div></div></div>
+      </div>
+    </div>
+    <div class="prompt-logic"><strong>Prompt Logic</strong>Facebook audiences skew older with stronger emotional content preference. Using sensory and introspective language ("feels warm in more ways than one") creates deeper emotional resonance than feature-based descriptions.</div>
+  </div>
+  <div class="tab-panel" id="tab-work">
+    <div class="script-card">
+      <div class="script-header"><div class="script-header-left"><h2>Study & Work Productivity</h2><p>Results-focused · Students & remote workers</p></div><span class="platform-badge-sm pb-sm-yt">▶️ YouTube Shorts</span></div>
+      <div class="script-steps">
+        <div class="script-step"><div class="step-dot d-hook">🎬</div><div class="step-body"><div class="step-timing">0–3 seconds</div><div class="step-label">Hook</div><div class="step-text">"I found a café where I actually finish my work… no distractions 😳💻"</div></div></div>
+        <div class="script-step"><div class="step-dot d-prob">😩</div><div class="step-body"><div class="step-label">Problem</div><div class="step-text">"Everywhere I go — too loud, no proper seating, or Wi-Fi that gives up when you need it most…"</div></div><</div>
+        <div class="script-step"><div class="step-dot d-exp">✨</div><div class="step-body"><div class="step-label">Experience</div><div class="step-text">"Brew Haven Café changed that. Comfortable seating, reliable Wi-Fi, and coffee that keeps me focused without feeling drained."</div></div></div>
+        <div class="script-step"><div class="step-dot d-emo">💛</div><div class="step-body"><div class="step-label">Emotional Connection</div><div class="step-text">"I don't feel stuck anymore. I go there, sit down… and things just start getting done. It feels easy."</div></div></div>
+        <div class="script-step"><div class="step-dot d-cta">📍</div><div class="step-body"><div class="step-label">Call To Action</div><div class="step-text">"Tired of 'trying' to be productive? Switch your space. Try Brew Haven Café in Chennai — you'll feel the difference 💻☕✨"</div></div></div>
+      </div>
+    </div>
+    <div class="prompt-logic"><strong>Prompt Logic</strong>YouTube Shorts audiences respond to outcome-specific hooks ("I actually finish my work"). The problem was made hyper-specific (loud + no seating + bad WiFi) because specificity creates stronger audience identification than generic frustrations.</div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<section>
+  <div class="section-label reveal">Step 3 — Distribution</div>
+  <div class="section-title reveal">Platform-Specific<br>Adaptations</div>
+  <div class="platform-adapt-grid">
+    <div class="platform-adapt-card reveal"><div class="pa-icon pa-ig">📸</div><div><div class="platform-name">Instagram Reels</div><div class="platform-tip">Short punchy hook. First 3 seconds critical. Emoji-heavy captions. Ends with "save this" or "tag a friend" CTA. Aesthetic visuals. Target: 18–28 year olds with high energy tone.</div></div></div>
+    <div class="platform-adapt-card reveal"><div class="pa-icon pa-fb">👍</div><div><div class="platform-name">Facebook Feed</div><div class="platform-tip">Longer captions perform better. Emotional storytelling over hype. Softer CTAs ("learn more", "visit us"). Targets 25–40 age group. Cozy, relatable tone works best for this audience.</div></div></div>
+    <div class="platform-adapt-card reveal"><div class="pa-icon pa-yt">▶️</div><div><div class="platform-name">YouTube Shorts</div><div class="platform-tip">Outcome-specific hooks ("I actually finished all my work"). Subtitles essential. No emojis in opening line. Productivity and results angle resonates strongly with student audience.</div></div></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<section>
+  <div class="section-label reveal">Step 4 — Captions</div>
+  <div class="section-title reveal">Instagram Captions<br>with CTAs</div>
+  <div class="caption-grid">
+    <div class="caption-card reveal"><div class="caption-num">CAPTION 01 — Mood Reset</div><div class="caption-text">Your perfect coffee break is waiting ☕✨<br>Step into comfort, calm vibes, and seriously good coffee at Brew Haven Café.<br><br>👉 Visit us today and feel the difference!</div><div class="caption-tags">#BrewHavenCafe #ChennaiCafe #CoffeeLovers #CafeVibes #StudySpot</div></div>
+    <div class="caption-card reveal"><div class="caption-num">CAPTION 02 — Brand Promise</div><div class="caption-text">Good coffee. Cozy corners. Better moods. ☕🌿<br>That's the Brew Haven promise 💛<br><br>👉 Drop in today and make your day better, one sip at a time!</div><div class="caption-tags">#ChennaiFoodies #CafeCulture #CoffeeTime #BrewHavenVibes #ChennaiDiaries</div></div>
+    <div class="caption-card reveal"><div class="caption-num">CAPTION 03 — Discovery POV</div><div class="caption-text">POV: You found your new favorite café in Chennai 😍☕<br>Comfort, vibes, and coffee that just hits right.<br><br>👉 Don't just scroll — come experience it!</div><div class="caption-tags">#BrewHavenCafe #CafeLovers #ChennaiLife #CoffeeAddict #HiddenGems</div></div>
+    <div class="caption-card reveal"><div class="caption-num">CAPTION 04 — Self-Care Angle</div><div class="caption-text">Need a break from everything? We got you ☕🌿<br>Relax, recharge, and reset at Brew Haven Café.<br><br>👉 Visit us today and slow down with us 🤍</div><div class="caption-tags">#RelaxAndSip #ChennaiCafes #CoffeeBreak #CafeVibes #BrewHaven</div></div>
+    <div class="caption-card reveal"><div class="caption-num">CAPTION 05 — Productivity Angle</div><div class="caption-text">Work, chill, repeat 💻☕✨<br>Brew Haven Café is where productivity meets comfort.<br><br>👉 Grab your spot today and stay a while!</div><div class="caption-tags">#StudyCafe #WorkFromCafe #ChennaiStudents #CoffeeVibes #BrewHavenCafe</div></div>
+  </div>
+</section>
+<div class="divider"></div>
+
+<section>
+  <div class="section-label reveal">Prompt Engineering</div>
+  <div class="section-title reveal">Techniques Applied</div>
+  <table class="summary-table reveal">
+    <thead><tr><th>Technique</th><th>Applied In</th><th>Effect</th></tr></thead>
+    <tbody>
+      <tr><td>Open Loop Hooks</td><td>Improved hooks v2</td><td>Incomplete thought forces viewer to keep watching</td></tr>
+      <tr><td>Problem–Solution–CTA</td><td>All 3 scripts</td><td>Direct response structure proven to convert</td></tr>
+      <tr><td>Platform Tone Matching</td><td>All 3 scripts</td><td>Different language register per audience type</td></tr>
+      <tr><td>Specificity Instruction</td><td>Work/Study script</td><td>"Loud + no seating + bad WiFi" beats generic problem</td></tr>
+      <tr><td>Iterative Refinement</td><td>Hooks v1 → v2</td><td>Improvement prompt targeting curiosity gaps</td></tr>
+      <tr><td>Emotional Anchoring</td><td>Cozy script</td><td>Sensory language creates deeper emotional resonance</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<footer>
+  <div class="footer-name">Swathi K</div>
+  <p>Future Interns · Prompt Engineering Track · Task 2</p>
+  <p style="margin-top:12px"><a href="https://github.com/swathikumaravel48-tech/FUTURE_PE_02" target="_blank">→ View GitHub Repository</a></p>
+</footer>
+<script>
+  function showTab(id,btn){document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');btn.classList.add('active')}
+  const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('visible');obs.unobserve(el.target)}})},{threshold:0.08});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
+          
